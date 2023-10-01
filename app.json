@@ -1,13 +1,12 @@
 {
   "expo": {
-    "name": "ReactNativeUI",
+    "name": "dojo",
     "slug": "ReactNativeUI",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,16 +14,33 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yanivamon.dojo",
+      "scheme": "com.yanivamon.dojo",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "847129469910-prgobng5jvjq8ljb0g774046coejqett.apps.googleusercontent.com"
+        }
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.yanivamon.dojo",
+      "scheme": "com.yanivamon.dojo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "811ff38d-f7f3-4a22-8698-637d5331382c"
+      }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
