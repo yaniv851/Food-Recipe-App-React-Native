@@ -8,7 +8,7 @@ import WelcomeScreen from "../screens/WelcomeScreen";
 import InterestContainer from "../screens/onboardingScreen";
 import 'react-native-gesture-handler';
 import RegisterScreen from "../screens/RegisterScreen";
-
+import FacebookTesting from "../screens/FacebookTesting";
 const Tab = createBottomTabNavigator();
 
 const CustomTabBarButton = ({ children, onPress }) => (
@@ -18,10 +18,12 @@ const CustomTabBarButton = ({ children, onPress }) => (
   >
     <View
       style={{
-        width: 70,
-        height: 70,
+        width: 55,
+        height: 55,
         borderRadius: 35,
         backgroundColor: "#e32f45",
+        borderWidth: 3,  // Use borderWidth to set the border
+        borderColor: "#fa8291",
       }}
     >
       {children}
@@ -47,7 +49,7 @@ function Home() {
           elevation: 0,
           backgroundColor: "#ffffff",
           borderRadius: 50,
-          height: 60,
+          height: 70,
           ...styles.shadow,
         },
       }}
@@ -70,14 +72,9 @@ function Home() {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: focused ? "#e32f45" : "#748c94",
+                  tintColor: focused ? "#CC4747" : "#FFFAFA",
                 }}
               />
-              <Text
-                style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}
-              >
-                Profile
-              </Text>
             </View>
           ),
         }}
@@ -103,11 +100,6 @@ function Home() {
                   tintColor: focused ? "#e32f45" : "#748c94",
                 }}
               />
-              <Text
-                style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}
-              >
-                Calendar
-              </Text>
             </View>
           ),
         }}
@@ -121,8 +113,8 @@ function Home() {
               source={require("../../assets/icons/tori_icon.png")}
               resizeMode="contain"
               style={{
-                width: 30,
-                height: 30,
+                width: 25,
+                height: 25,
                 tintColor: "#fff",
               }}
             />
@@ -151,11 +143,6 @@ function Home() {
                   tintColor: focused ? "#e32f45" : "#748c94",
                 }}
               />
-              <Text
-                style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}
-              >
-                Feed
-              </Text>
             </View>
           ),
         }}
@@ -182,11 +169,6 @@ function Home() {
                   tintColor: focused ? "#e32f45" : "#748c94",
                 }}
               />
-              <Text
-                style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}
-              >
-                Home
-              </Text>
             </View>
           ),
         }}
@@ -208,7 +190,7 @@ function AppNavigation() {
         <Stack.Screen name="HomeScreen" component={Home} />
         <Stack.Screen name="onBoarding" component={InterestContainer} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="register" component={RegisterScreen} />
+        <Stack.Screen name="register" component={FacebookTesting} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -226,8 +208,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   btnCircle: {
-    width: 80,
-    height: 80,
+    width: 65,
+    height: 65,
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
@@ -239,7 +221,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
-    bottom: 28,
+    bottom: 30,
   },
 });
 

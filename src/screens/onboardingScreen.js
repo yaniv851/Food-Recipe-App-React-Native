@@ -16,6 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 
+
 const interestsData = [
   { name: "Meditating", image: require("../../assets/icons/meditation.png") },
   { name: "Running", image: require("../../assets/icons/running.png") },

@@ -17,7 +17,7 @@ import { useFonts } from "expo-font";
 
 WebBrowser.maybeCompleteAuthSession();
 
-export default function RegisterScreen() {
+export default function FacebookTesting() {
   const [accessToken, setAccessToken] = useState(null);
   const [appleAuthAvailable, setAppleAuthAvailable] = useState(false);
   const [user, setUser] = useState(null);

@@ -2,6 +2,7 @@
   "expo": {
     "name": "dojo",
     "slug": "ReactNativeUI",
+    "scheme": ["dojo", "fb3497198713853522" ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,20 +17,14 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.yanivamon.dojo",
-      "scheme": "com.yanivamon.dojo",
-      "config": {
-        "googleSignIn": {
-          "reservedClientId": "847129469910-prgobng5jvjq8ljb0g774046coejqett.apps.googleusercontent.com"
-        }
-      }
+      "usesAppleSignIn": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.yanivamon.dojo",
-      "scheme": "com.yanivamon.dojo"
+      "package": "com.yanivamon.dojo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -40,7 +35,8 @@
       }
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-apple-authentication"
     ]
   }
 }

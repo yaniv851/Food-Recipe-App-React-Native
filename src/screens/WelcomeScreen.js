@@ -29,7 +29,7 @@ export default function WelcomeScreen() {
     AsyncStorage.getItem('journeyStarted').then((value) => {
       if (value === 'true') {
         // If journeyStarted is true, navigate to HomeScreen
-        setTimeout(() => navigation.navigate('register'), 2500);
+        setTimeout(() => navigation.navigate('HomeScreen'), 2500);
       } else {
         // If journeyStarted is not true, navigate to onBoarding screen
         setTimeout(() => navigation.navigate('register'), 2500);

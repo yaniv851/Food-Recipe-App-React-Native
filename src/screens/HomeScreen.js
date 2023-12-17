@@ -243,9 +243,9 @@ export default function Home() {
           <Text style={styles.dojoOpen}>Open a new Dojo</Text>
         </View>
       </View>
-      {/* <TouchableOpacity style={styles.button} onPress={handleClearAsyncStorage}>
+      <TouchableOpacity style={styles.button} onPress={handleClearAsyncStorage}>
         <Text style={styles.buttonText}>Clear AsyncStorage</Text>
-      </TouchableOpacity> */}
+      </TouchableOpacity>
     </Animated.View>
   );
 }
@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
     height: 50,
     position: "absolute", // Position the mentor view at the bottom
-    bottom: 110, // Adjust this value to position the mentor view at the bottom
+    bottom: 130, // Adjust this value to position the mentor view at the bottom
   },
   iam: {
     marginLeft: 3,
